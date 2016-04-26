@@ -1,0 +1,7 @@
+.DS_Store
+.editorconfig
+.sass-cache/
+vendor/
+public/
+node_modules/
+bin/

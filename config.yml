@@ -1,0 +1,75 @@
+paths:
+  app: "app"
+  public: "public"
+groups:
+  scripts:
+    paths:
+      - "app/scripts"
+      - "app/components"
+    concat:
+      "/assets/scripts/app.js": "app/**/*.{js,es6,jsx}"
+      "/assets/scripts/vendor.js": "vendor/**/*.{js,es6,jsx}"
+    order:
+      - vendor/react.js
+      - vendor/react-dom.js
+      - vendor/fastclick.js
+      - vendor/zepto.js
+  styles:
+    paths:
+      - "app/styles"
+    concat:
+      "/assets/styles/app.css": "{app/**/[a-z]*.scss}"
+      "/assets/styles/vendor.css": "{vendor/**/*.{css,scss}}"
+    order:
+  views:
+    paths:
+      - "app/views"
+    copy:
+      "/views": "{app/views/*.html}"
+  images:
+    paths:
+      - app/images
+    sprite:
+      "../app/styles/icons.scss": "app/images/*.png"
+    copy:
+      "/assets/images": "app/images/other-images/*"
+  files:
+    paths:
+      - "app/files"
+    copy:
+      "/": "app/files/*"
+modules:
+  wrapper: cmd
+  definition: /assets/scripts/vendor.js
+notification: true
+bundles:
+  react.js:
+    version: 0.14.7
+    url: https://cdn.bootcss.com/react/0.14.7/react.js
+  react-dom.js:
+    version: 0.14.7
+    url: https://cdn.bootcss.com/react/0.14.7/react-dom.js
+  fastclick.js:
+    version: 1.0.6
+    url: https://cdn.bootcss.com/fastclick/1.0.6/fastclick.js
+  zepto.js:
+    version: 1.1.6
+    url: http://registry.aixforce.com/packages/zepto/1.1.6/zepto.js
+  lodash.js:
+    version: 2.2.1
+    url: http://registry.aixforce.com/packages/lodash/2.2.1/lodash.js
+  redux.js:
+    version: 3.3.1
+    url: https://cdn.bootcss.com/redux/3.3.1/redux.js
+  react-redux.js:
+    version: 4.4.0
+    url: https://cdn.bootcss.com/react-redux/4.4.0/react-redux.js
+  react-router.js:
+    version: 2.0.9-rc4
+    url: https://cdn.bootcss.com/react-router/2.0.9-rc4/ReactRouter.js
+  hammer.js:
+    version: 2.0.6
+    url: https://cdn.bootcss.com/hammer.js/2.0.6/hammer.js
+environments:
+  production:
+    groups:

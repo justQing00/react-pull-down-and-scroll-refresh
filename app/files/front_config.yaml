@@ -1,0 +1,13 @@
+render:
+  layouts:
+    "MOBILE-DEFAULT":
+      type: "SITE"
+      root: "/"
+      name: "默认移动端模板"
+      desc: "默认主题的移动端模板"
+
+components:
+
+
+mappings:
+

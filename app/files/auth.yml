@@ -1,0 +1,12 @@
+# 全局树
+- tree: GLOBAL
+  expose: true
+  next:
+    - key: get_all
+      get: .*
+    - key: post_all
+      post: .*
+    - key: put_all
+      put: .*
+    - key: delete_all
+      delete: .*
