@@ -1,12 +1,31 @@
 
-## 手机端
-### 下拉加载与滚动到底部时自动刷新
+## mobile
+### pull down and scroll refresh
 
+### If you want to run this project in you browser, please install these development environment.
+### For time limit, I donot turn it in to a standard webpack project, May be next time I'll do it well.
 
-暂时使用这个，在项目根目录下产看前台页面
+### bulid
+#### 1、ruby > 2.2
+#### 2、use this [gem](https://gems.ruby-china.org/)
+#### 3、linner >= 0.12.0
+```
+
+  gem install linner
 
 ```
 
-  ruby -run -e httpd "." -p 3000
+
+
+Use ruby server to run this the project in root directory!
 
 ```
+
+  1、linner w
+  2、ruby -run -e httpd "." -p 3000
+
+```
+
+### Reference
+[web-pull-to-refresh](https://github.com/apeatling/web-pull-to-refresh)
+[linner](https://github.com/SaitoWu/linner)
